@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Allow the Authorization header to reach PHP (some Apache configs strip it)
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Respond to CORS preflight requests directly
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=204,L]

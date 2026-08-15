@@ -1,0 +1,42 @@
+.admin-shell { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+
+.admin-sidebar {
+  background: var(--ink); color: #EFEAE0; padding: 24px 18px; display: flex; flex-direction: column;
+}
+.admin-sidebar .brand { color: white; margin-bottom: 32px; display: block; }
+.admin-sidebar nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.admin-sidebar nav a {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px;
+  text-decoration: none; color: #C9CFC9; font-size: 0.92rem; font-weight: 500;
+}
+.admin-sidebar nav a:hover { background: rgba(255,255,255,0.06); color: white; }
+.admin-sidebar nav a.active { background: var(--marigold); color: var(--ink); font-weight: 700; }
+.admin-sidebar .signout { color: #C9CFC9; background: none; border: none; text-align: left; padding: 10px 12px; font-size: 0.9rem; }
+.admin-sidebar .signout:hover { color: white; }
+
+.admin-main { padding: 32px 40px; max-width: 1180px; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.admin-header .who { font-size: 0.88rem; color: var(--text-muted); }
+
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.stat-card { padding: 20px; }
+.stat-card .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); font-weight: 700; }
+.stat-card .value { font-family: var(--font-display); font-size: 2rem; margin-top: 6px; color: var(--ink); }
+
+.panel { padding: 24px; margin-bottom: 24px; }
+.panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.panel-head h3 { margin: 0; }
+
+.tabs { display: flex; gap: 6px; margin-bottom: 18px; }
+.tabs button {
+  background: var(--cream); border: 1px solid var(--border); padding: 8px 16px; border-radius: 999px;
+  font-size: 0.85rem; font-weight: 600; color: var(--text-muted);
+}
+.tabs button.active { background: var(--ink); color: white; border-color: var(--ink); }
+
+.row-actions { display: flex; gap: 8px; }
+
+.trash-banner {
+  display: flex; align-items: center; gap: 10px; background: var(--pending-bg); color: var(--pending);
+  padding: 12px 16px; border-radius: 8px; font-size: 0.87rem; margin-bottom: 16px;
+}
