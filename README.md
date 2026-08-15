@@ -1,4 +1,4 @@
-# Booqly — E-commerce Booking System
+E-commerce Booking System
 
 React frontend, PHP REST API, MySQL database. Public booking site and the
 admin dashboard are fully separate areas of the app, gated by user role.
